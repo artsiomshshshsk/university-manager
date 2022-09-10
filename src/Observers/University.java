@@ -1,6 +1,5 @@
 package Observers;
 
-import Comparators.StudentWithScholarshipComparator;
 import Observable.Person;
 import Observable.Student;
 import Observable.Subject;
@@ -11,16 +10,14 @@ import Workers.UniversityWorker;
 import Workers.Worker;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class University implements Observer, Serializable {
     private static final long serialVersionUID = 1L;
     ArrayList<Person> university;
     HashMap<Course,Integer> courses;
     ArrayList<Student> studentsWithScholarship;
+
     int amountOfStudents;
 
     public University() {
@@ -132,7 +129,7 @@ public class University implements Observer, Serializable {
         ArrayList<Student> st;
         if(scolarship == true){
             st = new ArrayList<>(new HashSet<>(studentsWithScholarship));
-            Collections.sort(st,new StudentWithScholarshipComparator());
+            Collections.sort(st, Comparator.comparing(Student::hasScholarship));
         }
         else {
             st = getAllStudents();

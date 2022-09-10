@@ -4,10 +4,8 @@ import Observers.Observer;
 import Observers.University;
 import Tools.Course;
 
-import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.TreeMap;
 
 public class Student extends Person implements Subject{
     private ArrayList<Observer> observerList;
@@ -51,11 +49,11 @@ public class Student extends Person implements Subject{
         registerObserver(university);
     }
 
-    public boolean isScholarship() {
+    public boolean hasScholarship() {
         return scholarship;
     }
 
-    public void setScholarship(boolean scholarship) {
+    public void setHasScholarship(boolean scholarship) {
         this.scholarship = scholarship;
     }
 
