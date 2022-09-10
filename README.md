@@ -4,5 +4,5 @@ The objective of this project was to apply the learned design patterns.
 
 UI is made with the help of Java Swing.
 
-![Screnshot](src/img/img.jpg)
-![Screnshot](src/img/img1.jpg)
+![Screnshot](img/img.jpg)
+![Screnshot](img/img1.jpg)
